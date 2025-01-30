@@ -44,7 +44,7 @@ resultado2 = con.execute("""
 print("\n", resultado2, "\n")
 
 print('#############################################################################################################')
-print("3. Quem aluga mais bikes, homens ou mulheres? Qual o tempo médio de aluguel de bikes?\n")
+print("3. Quem aluga mais bikes, homens ou mulheres? Qual o tempo médio de aluguel de bikes?")
 print('#############################################################################################################')
 
 resultado3 = con.execute("""
@@ -59,7 +59,7 @@ resultado3 = con.execute("""
 print("\n", resultado3 , "\n")
 
 print('#############################################################################################################')
-print("4. Qual faixa etária aluga mais bikes? Qual o tempo médio de aluguel de bikes?\n")
+print("4. Qual faixa etária aluga mais bikes? Qual o tempo médio de aluguel de bikes?")
 print('#############################################################################################################')
 
 resultado4 = con.execute("""
