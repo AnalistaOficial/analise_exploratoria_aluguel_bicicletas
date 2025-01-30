@@ -1,10 +1,10 @@
 import duckdb
 import os
 
-base_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Define o caminho do arquivo
-file_path = os.path.join(base_dir, "..", "data", "dataset.csv")
+base_dir = os.getcwd()  # Diretório atual
+parent_dir = os.path.join(base_dir, "..")
+data_dir = os.path.join(parent_dir, "data")  # Caminho da pasta "data"
+file_path = os.path.join(data_dir, "dataset.csv")  # Caminho completo do arquivo
 
 # Conectar ao DuckDB (em memória)
 con = duckdb.connect(database=':memory:')
@@ -14,7 +14,6 @@ con.execute(f"""
     CREATE TABLE alugueis AS
     SELECT * FROM read_csv_auto('{file_path}');
 """)
-
 
 print('#############################################################################################################')
 print("1. Quais são as Top 5 estações com maior número de aluguel de bikes?")
