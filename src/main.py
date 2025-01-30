@@ -103,6 +103,6 @@ print('#########################################################################
 print("\n", resultado5, "\n")
 
 print('#############################################################################################################')
-print("\n5. Quais são as estações com maior número de bikes devolvidas?")
+print("5. Quais são as estações com maior número de bikes devolvidas?")
 print('#############################################################################################################')
-print("\n", resultado6)
+print("\n", resultado6, "\n")
