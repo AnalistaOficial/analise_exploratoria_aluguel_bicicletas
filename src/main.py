@@ -1,13 +1,19 @@
 import duckdb
+import os
 
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Define o caminho do arquivo
+file_path = os.path.join(base_dir, "..", "data", "dataset.csv")
 
 # Conectar ao DuckDB (em memória)
 con = duckdb.connect(database=':memory:')
 
 # Ler o arquivo CSV
-con.execute("""
+con.execute(f"""
     CREATE TABLE alugueis AS
-    SELECT * FROM read_csv_auto('./data/dataset.csv');
+    SELECT * FROM read_csv_auto('{file_path}');
+>>>>>>> 55a6366 (Adicionando arquivos do projeto 001)
 """)
 
 
