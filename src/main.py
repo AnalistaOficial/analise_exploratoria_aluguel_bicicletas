@@ -13,7 +13,6 @@ con = duckdb.connect(database=':memory:')
 con.execute(f"""
     CREATE TABLE alugueis AS
     SELECT * FROM read_csv_auto('{file_path}');
->>>>>>> 55a6366 (Adicionando arquivos do projeto 001)
 """)
 
 
